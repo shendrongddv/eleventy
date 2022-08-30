@@ -19,7 +19,7 @@ collections:
     fields:
       - { label: "title", name: "title", widget: "string" }
       - { label: "layout", name: "layout", widget: "hidden", default: "base.njk" }
-      - { label: "Slug", name: "permalink", widget: "hidden", default: "/{{ title | slugify }}/" }     
+      - { label: "Slug", name: "permalink", widget: "hidden", default: """/{{ title | slugify }}/""" }     
       - { label: "tags", name: "tags", widget: "hidden", default: "pages" }
       - { label: "description", name: "description", widget: "string" }
       - { label: "Keyword", name: "keyword", widget: "string" }
@@ -36,7 +36,7 @@ collections:
       preview: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Slug", name: "permalink", widget: "hidden", default: "/{{ title | slugify }}/" }
+      - { label: "Slug", name: "permalink", widget: "hidden", default: """/{{ title | slugify }}/""" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Keyword", name: "keyword", widget: "string" }
       - { label: "Author", name: "author", widget: "string" }

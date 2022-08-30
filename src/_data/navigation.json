@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "text": "About Us",
+      "url": "/#about",
+      "target": "_self"
+    },
+    {
+      "text": "Produk",
+      "url": "/#produk",
+      "target": "_self"
+    },
+    {
+      "text": "Add Value",
+      "url": "/#add",
+      "target": "_self"
+    },
+    {
+      "text": "Blog",
+      "url": "/blog",
+      "target": "_self"
+    }
+  ]
+}

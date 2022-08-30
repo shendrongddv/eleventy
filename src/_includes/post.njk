@@ -1,0 +1,22 @@
+{% include "header.njk" %}
+<div class="container mt-7">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card mb-3">          
+                <div class="card-body">
+                    <h3 class="card-title text-capitalize text-center">{{ title }}</h3>
+                    <p class="card-text text-center">Posted on {{ date | readableDate }} By {{ author }}</p>
+                    <img src="{{ image }}" class="card-img-top" alt="{{ imageAlt }}">
+                    <div style="clear:both;">&nbsp;</div>
+                    <div class="text-card">
+                    {{ content | safe }}
+                    </div>
+                </div>
+            </div>        
+        </div>
+        <div class="col-12 col-md-4">
+        {% include "sidebar.njk" %}
+        </div>
+    </div>
+</div>
+{% include "footer.njk" %}

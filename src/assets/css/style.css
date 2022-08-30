@@ -1,0 +1,47 @@
+* {
+    /*margin: 0px auto;*/
+}
+
+.full-width, .expand {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    display: block;
+}
+
+.social-icons {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: .85em;
+    color: #999;
+}
+
+.text-right{
+    text-align: right !important;
+}
+
+.icon {
+    margin-left: 0.12em;
+    margin-right: 0.12em;
+    min-width: 2.5em;
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+    display: inline-block;
+}
+
+img{
+    width: 100%!important;
+    height: auto;
+}
+
+.mt-7 {
+    margin-top: 70px !important;
+}
+a {
+    text-decoration: none;
+}
+
+.nav-link-bottom {
+    padding: 0.5rem 1rem;
+}

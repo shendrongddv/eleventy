@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "name": "facebook",
+      "iconClass": "fa-brands fa-facebook-f",
+      "url": "#"
+    },
+    {
+      "name": "twitter",
+      "iconClass": "fa-brands fa-twitter",
+      "url": "#"
+    },
+    {
+      "name": "instagram",
+      "iconClass": "fab fa-instagram",
+      "url": "#"
+    },
+    {
+      "name": "tiktok",
+      "iconClass": "fa-brands fa-tiktok",
+      "url": "#"
+    },
+    {
+      "name": "linkedin",
+      "iconClass": "fab fa-linkedin",
+      "url": "#"
+    },
+    {
+      "name": "youtube",
+      "iconClass": "fab fa-youtube",
+      "url": "#"
+    }
+  ]
+}

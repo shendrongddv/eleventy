@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+                
+        <div class="col-md-12 text-center mb-4">
+        {%- for nav in navigation.items -%} 
+            <a class="nav-link-bottom text-capitalize" href="{{ nav.url }}" target="{{ nav.target }}">{{ nav.text }}</a>
+        {%- endfor -%}
+        </div>
+
+        <div class="social-icons full-width text-center">
+        {% for socialNav in social.items %}
+            <a class="icon text-capitalize" target="_blank" href="{{ socialNav.url }}">
+                <i class="{{ socialNav.iconClass }} text-secondary"></i>
+            </a>
+        {% endfor %}
+        </div>
+    </div>
+</div>
+<div style="clear:both;">&nbsp;</div>
+
+<div class="container">
+    <div class="row">
+        <div class="text-center">
+            <p>© 2022 <a href="/">{{ settings.site_name }}</a></p>
+        </div>
+    </div>
+</div>
+{% include "footer-script.njk" %}
+
+</body>
+</html>

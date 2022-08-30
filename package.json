@@ -1,0 +1,21 @@
+{
+  "name": "static-cms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "author": "Hadi Ishak Faridz",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.2",
+    "@11ty/eleventy-navigation": "^0.3.5",
+    "html-minifier": "^4.0.0",
+    "luxon": "^3.0.1",
+    "prettier": "^2.7.1"
+  },
+  "dependencies": {
+    "javascript-stringify": "^2.1.0"
+  }
+}

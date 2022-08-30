@@ -1,0 +1,99 @@
+backend:
+  name: github
+  repo: dlingodigital/static-cms
+  branch: master
+  base_url: https://auth.dlingo.net
+
+media_folder: "src/assets/images"
+public_folder: "assets/images"
+
+local_backend: false
+
+collections:
+  - label: "Pages"
+    name: "Pages"
+    folder: "src/pages"
+    create: true
+    editor: 
+      preview: true
+    fields:
+      - { label: "title", name: "title", widget: "string" }
+      - { label: "layout", name: "layout", widget: "hidden", default: "base.njk" }
+      - { label: "Slug", name: "permalink", widget: "hidden", default: "/{{ title | slugify }}/" }     
+      - { label: "tags", name: "tags", widget: "hidden", default: "pages" }
+      - { label: "description", name: "description", widget: "string" }
+      - { label: "Keyword", name: "keyword", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Open Graph Title", name: "ogtitle", widget: "string", required: false }
+      - { label: "Open Graph Description", name: "ogdescription", widget: "string", required: false }
+      - { label: "Open Graph Image", name: "ogimage", widget: "image", required: false }
+
+  - label: "Blog"
+    name: "blog"
+    folder: "src/posts"
+    create: true
+    editor:
+      preview: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Slug", name: "permalink", widget: "hidden", default: "/{{ title | slugify }}/" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Keyword", name: "keyword", widget: "string" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "image", widget: "image" }
+      - { label: "Feature Image Alt", name: "imageAlt", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "tags", name: "tags", widget: "hidden", default: "posts" }
+      - { label: "layout", name: "layout", widget: "hidden", default: "post.njk" }
+      - { label: "Open Graph Title", name: "ogtitle", widget: "string", required: false }
+      - { label: "Open Graph Description", name: "ogdescription", widget: "string", required: false }
+      - { label: "Open Graph Image", name: "ogimage", widget: "image", required: false }
+
+  - label: "Settings"
+    name: "settings"
+    editor:
+      preview: false
+    files:
+      - label: "Navigation"
+        name: "items"
+        file: "src/_data/navigation.json"
+        extension: "json"
+        format: "json"
+        fields:
+          - label: Nav Items
+            name: items
+            widget: list
+            allow_add: true
+            collapsed: false
+            fields:
+              - { label: Title, name: text, widget: string }
+              - { label: URL, name: url, widget: string }
+              - { label: Target, name: "target", widget: "select", options: ["_self", "_parent", "_top", "_blank"], default: "_self" }
+      - label: "Settings"
+        name: "settings"
+        file: "src/_data/settings.json"
+        extension: "json"
+        format: "json"
+        fields:
+          - { label: "Site Name", name: "site_name", widget: "string" }
+          - { label: "Site URL", name: "site_url", widget: "string" }
+          - { label: "Site Logo", name: "site_logo", widget: "image" }
+          - { label: "Site Favicon", name: "site_fav", widget: "image" }
+          - { label: "GTM ID", name: "gtm_id", widget: "string", default: "", required: false }
+          - { label: "PIXEL ID", name: "pixel_id", widget: "string", default: "", required: false }
+      - label: "Social"
+        name: "social"
+        extension: "json"
+        format: "json"
+        file: "src/_data/social.json"
+        fields:
+          - label: Social Items
+            name: items
+            widget: list
+            allow_add: true
+            collapsed: false
+            fields:
+              - { label: Title, name: name, widget: string }
+              - { label: "FontAwesome Icon", name: iconClass, widget: string }
+              - { label: URL, name: url, widget: string }

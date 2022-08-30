@@ -1,0 +1,13 @@
+{% include "header.njk" %}
+<div class="container mt-7">
+    <div class="row">
+        <div class="col-md-8">
+            
+        {{ content | safe }}
+        </div>
+        <div class="col-12 col-md-4">
+        {% include "sidebar.njk" %}
+        </div>
+    </div>
+</div>
+{% include "footer.njk" %}

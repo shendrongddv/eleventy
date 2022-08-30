@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: dlingodigital/static-cms
+  repo: shendrongddv/eleventy
   branch: master
   base_url: https://auth.dlingo.net
 

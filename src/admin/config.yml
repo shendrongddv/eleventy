@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: shendrongddv/eleventy
-  branch: master
+  branch: main
   base_url: https://auth.dlingo.net
 
 media_folder: "src/assets/images"

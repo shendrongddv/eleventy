@@ -19,6 +19,11 @@
       "text": "Blog",
       "url": "/blog",
       "target": "_self"
+    },
+    {
+      "target": "_self",
+      "text": "test",
+      "url": "/test"
     }
   ]
 }
